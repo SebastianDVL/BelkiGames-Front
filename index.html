@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/controller.js" defer></script>
+    <title>BelkiGames</title>
+</head>
+<body class="select-none">
+    <header>
+        <div class="bg-gradient-to-r from-[#421A4C] to-[#8a3fdf] text-white px-10 py-6 md:flex justify-between items-center">
+            <h1 class="text-4xl text-center md:text-left mb-10 md:mb-0 font-bold">BelkiGames</h1>
+            <ul class="flex  md:w-1/5 justify-evenly text-lg cursor-pointer">
+                <li>Registrarse</li>
+                <li><i class="fa-solid fa-ghost mr-2"></i>Iniciar Sesion</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="bg-[#03071E] pl-[17%]  pt-[2%] pr-[2%]">
+            <aside>
+                <div class="">
+                </div>
+            </aside>
+            <section>
+                <article>
+                    <div class="h-96 bg-slate-400 mb-[2%] rounded-lg">
+
+                    </div>
+                </article>
+                <article>
+                    <div class="grid grid-cols-5 gap-4" id="games">
+                         
+                    </div>
+                </article>
+            </section>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="bg-[#F5FFED] p-10 flex">
+            <div class="w-full flex">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Nosotros</li>
+                    <li>Empresa</li>
+                </ul>
+            </div>
+            <div class="w-full flex-col justify-center text-center">
+                    <h2>BelkiGames</h2>
+                    <p>&copy; Todos los derechos reservados</p>                
+            </div>
+            <div class="w-full flex justify-end">
+                <h2>Redes Sociales</h2>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
+
+    <template data-game>
+        <div">
+            <div class="group aspect-square rounded-t-lg bg-[length:100%_100%]">
+                <div class="bg-emerald-600/60 w-full h-full rounded-md">
+                    <img src="" alt="">
+
+                </div>
+                 
+            </div>
+            <div class=" text-white p-3 h-32">
+                <p class="text-lg font-bold">Nombre juego</p>
+                <h5>Precio</h5>
+            </div>
+        
+        </div>
+    </template>
+</body>
+</html>
