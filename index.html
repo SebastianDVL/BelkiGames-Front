@@ -4,77 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/controller.js" defer></script>
-    <title>BelkiGames</title>
+    <script src="./js/controllerIndex.js" defer></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>BelkiGames | Welcome</title>
 </head>
-<body class="select-none">
-    <header>
-        <div class="bg-gradient-to-r from-[#421A4C] to-[#8a3fdf] text-white px-10 py-6 md:flex justify-between items-center">
-            <h1 class="text-4xl text-center md:text-left mb-10 md:mb-0 font-bold">BelkiGames</h1>
-            <ul class="flex  md:w-1/5 justify-evenly text-lg cursor-pointer">
-                <li>Registrarse</li>
-                <li><i class="fa-solid fa-ghost mr-2"></i>Iniciar Sesion</li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div class="bg-[#03071E] pl-[17%]  pt-[2%] pr-[2%]">
-            <aside>
-                <div class="">
-                </div>
-            </aside>
-            <section>
-                <article>
-                    <div class="h-96 bg-slate-400 mb-[2%] rounded-lg">
+<body class="bg-fixed bg-[url('assets/img/bg.webp')] md:bg-[length:100%_100%] ">
 
-                    </div>
-                </article>
-                <article>
-                    <div class="grid grid-cols-5 gap-4" id="games">
-                         
-                    </div>
-                </article>
-            </section>
+    <main class="w-full h-screen bg-[#421A4Cc1] flex items-center justify-center overflow-y-scroll scroll-smooth p-20">
+
+        <div class="rounded-2xl p-10 bg-[#f5ffed2a] backdrop-blur-sm my-20">
+            <img src="./assets/img/logo" alt="" class="w-4/5 m-auto">
+            <form >
+               
+            </form>
         </div>
-        
     </main>
     <footer>
-        <div class="bg-[#F5FFED] p-10 flex">
-            <div class="w-full flex">
-                <ul>
-                    <li>Inicio</li>
-                    <li>Nosotros</li>
-                    <li>Empresa</li>
-                </ul>
-            </div>
-            <div class="w-full flex-col justify-center text-center">
-                    <h2>BelkiGames</h2>
-                    <p>&copy; Todos los derechos reservados</p>                
-            </div>
-            <div class="w-full flex justify-end">
-                <h2>Redes Sociales</h2>
-            </div>
-        </div>
+
     </footer>
-    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 
-    <template data-game>
-        <div">
-            <div class="group aspect-square rounded-t-lg bg-[length:100%_100%]">
-                <div class="bg-emerald-600/60 w-full h-full rounded-md">
-                    <img src="" alt="">
+    <template data-log>
+        <div>
+            <div class="mb-5">
+                <span class="text-white">Email</span>
+                <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
+            </div>
+            <div class="mb-5">
+                <span class="text-white">Contraseña</span>
+                <input type="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1">
+                <a class="hover:underline cursor-pointer text-[#8a3fdf]">Olvidaste tu contraseña?</a>
+            </div>
+            <button class="w-full bg-[#03071E] text-white p-3 rounded-xl hover:bg-[#070e3a] mb-5">Iniciar Sesion</button>
+            <div>
+                <p>No tienes una cuenta? <a class="hover:underline cursor-pointer" id="reg">Registrate</a></p>
+            </div>
+        </div> 
+    </template>
 
+    <template data-sign>
+        <div class="flex">
+            <div class="mr-5">
+                <div class="mb-5">
+                    <span class="text-white">Email</span>
+                    <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
                 </div>
-                 
+                <div class="mb-5">
+                    <span class="text-white">Nombre</span>
+                    <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
+                </div>
+                <div class="mb-5">
+                    <span class="text-white">Apellido</span>
+                    <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
+                </div>
+                <div>
+                    <span class="text-white">Nombre de usuario</span>
+                    <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
+                </div>
             </div>
-            <div class=" text-white p-3 h-32">
-                <p class="text-lg font-bold">Nombre juego</p>
-                <h5>Precio</h5>
+            <div>
+                <div class="mb-5">
+                    <span class="text-white">Pais</span>
+                    <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1" id="correo">
+                </div>
+                <div class="mb-5">
+                    <span class="text-white">Contraseña</span>
+                    <input type="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1">
+                </div>
+                <div class="mb-5">
+                    <span class="text-white">Repetir Constreseña</span>
+                    <input type="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full rounded-2xl sm:text-sm focus:ring-1">
+                </div>
+                <button class="w-full bg-[#03071E] text-white p-3 rounded-xl hover:bg-[#070e3a] my-5">Registrarse</button>
+                <div>
+                    <a class="hover:underline cursor-pointer" id="log">Volver</a>
+                </div>
+    
             </div>
-        
-        </div>
+          
+          
+        </div> 
     </template>
 </body>
 </html>
