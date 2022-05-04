@@ -22,5 +22,5 @@ body::-webkit-scrollbar{
 }
 
 .drop-shadow-xl{
-    filter:drop-shadow(1px 0px 4px white)!important;
+    filter:drop-shadow(1px 0px 4px rgba(255, 255, 255, 0.404))!important;
 }
