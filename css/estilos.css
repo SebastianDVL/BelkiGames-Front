@@ -21,3 +21,6 @@ body::-webkit-scrollbar{
     width: 0;
 }
 
+.drop-shadow-xl{
+    filter:drop-shadow(1px 0px 4px white)!important;
+}
