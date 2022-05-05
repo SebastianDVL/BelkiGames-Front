@@ -13,12 +13,14 @@ export async function changeForm(){
         
         let paises = await llenarPaises()
         let location = await getLocation()
-        
+
         paises.paises.forEach(pais =>{
             let option = document.createElement("option")
+            
             if(location.country == pais.name){
                 option.selected = true
             }
+
             option.value = pais.code
             option.textContent = pais.name
 

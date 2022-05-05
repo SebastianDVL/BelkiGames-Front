@@ -11,11 +11,11 @@
 </head>
 <body class="bg-fixed bg-[url('assets/img/bg.webp')] md:bg-[length:100%_100%] ">
 
-    <main class="w-full h-screen  bg-[#421A4Cc1] flex  items-center justify-center p-5 overflow-y-scroll">
+    <main class="w-full h-screen  bg-[#8a3fdfa1] flex  items-center justify-center p-5 overflow-y-scroll">
            
       
         <div class="p-10 text-white">
-            <img src="./assets/img/logo+nombre" alt="" class="w-3/5 m-auto drop-shadow-xl mb-5">
+            <img src="./assets/img/logo+nombre" alt="" class="w-3/5 m-auto mb-5">
             <form>
                
             </form>
@@ -30,55 +30,74 @@
     <template data-log>
         <div>
             <div class="flex mb-5">
-                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-300" for="username">
+                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#421A4C] text-slate-200" for="username">
                     <i class="fa-solid fa-at"></i>
                 </label>
-                <input id="username" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none " placeholder="Correo" type="text" autocomplete="email">
-              </div>
-              <div class="flex mb-5">
-                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-300" for="password">
+                <input id="username" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none bg-[#f5ffed]" placeholder="Correo" type="text" autocomplete="email">
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#421A4C] text-slate-200" for="password">
                     <i class="fa-solid fa-lock"></i>
                 </label>
-                <input id="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none " placeholder="Contraseña" type="password" autocomplete="current-password">
-              </div>
-              <input class="w-full  p-[1em] bg-[#03071e] text-white mb-5" type="submit" value="Iniciar Sesion">
-              <p>No tienes una cuenta? <a class="hover:underline cursor-pointer text-[#5e76fc]" id="reg">Registrate</a></p>
+                <input id="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none bg-[#f5ffed]" placeholder="Contraseña" type="password" autocomplete="current-password">
+            </div>
+                <input class="w-full  p-[1em] bg-[#03071e] text-white mb-5" type="submit" value="Iniciar Sesion">
+                <p>No tienes una cuenta? <a class="hover:underline cursor-pointer text-[#5e76fc]" id="reg">Registrate</a></p>
         </div>
       
     </template>
 
     <template data-sign>
         <div>
-            <div class="mb-5">
-                <span class="text-white">Email</span>
-                <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1" id="correo">
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Correo
+                </label>
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
             </div>
-            <div class="mb-5">
-                <span class="text-white">Nombre</span>
-                <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1" id="correo">
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Nombre
+                </label>
+                
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
             </div>
-            <div class="mb-5">
-                <span class="text-white">Apellido</span>
-                <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1" id="correo">
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Apellido
+                </label>
+             
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
             </div>
-            <div class="mb-5">
-                <span class="text-white">Nombre de usuario</span>
-                <input type="text" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1" id="correo">
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Usuario
+                </label>
+            
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
             </div>
         
-            <div class="mb-5">
-                <span class="text-white">Pais</span>
-                <select  id="paises" class="text-black mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1" >
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Pais
+                </label>
+                <select  id="paises" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" >
 
                 </select>
             </div>
-            <div class="mb-5">
-                <span class="text-white">Contraseña</span>
-                <input type="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1">
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Contraseña
+                </label>
+             
+                <input type="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none">
             </div>
-            <div class="mb-5">
-                <span class="text-white">Repetir Constreseña</span>
-                <input type="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-[#03071E] focus:ring-[#03071E] block w-full sm:text-sm focus:ring-1">
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Repetir Contraseña
+                </label>
+            
+                <input type="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none">
             </div>
             <button class="w-full bg-[#03071E] text-white p-3 rounded-xl hover:bg-[#070e3a] my-5">Registrarse</button>
             <div>
