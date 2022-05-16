@@ -1,5 +1,4 @@
-
-
+import {consumirAPI} from './consumirAPI.js'
 export async function validate(){
     let email = document.querySelector("#username")
 
@@ -9,16 +8,17 @@ export async function validate(){
         if(email.value == "" || password.value == ""){
             alert("Please enter your email and password")
         }else{
-            let parametros ={
-                method:"POST",
-                headers:{
-                    "Content-Type": "application/json"
-                },
-                body:{"email":email.value,"password":password.value}
+            let data = await consumirAPI('https://belkigames.herokuapp.com/api/v1/user/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                  },
+                body: JSON.stringify({email:email.value,password:password.value})
+            })
+          
+            if(data.success){
+                window.location.href=(`./index.html?user=${data.data[0].usuario}`)
             }
-            let res = await fetch('https://belkigames.herokuapp.com/api/v1/user/login/',parametros)
-
-            console.log(res.json())
         }
     }
 }
