@@ -4,91 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/controller.js" defer></script>
-    <title>BelkiGames</title>
+    <script src="./js/controllerForms.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>BelkiGames | Welcome</title>
 </head>
-<body class="select-none scroll-smooth">
-    <header>
-        <div class="bg-gradient-to-r from-[#421A4C] to-[#8a3fdf] text-white px-10 py-5 md:py-3  md:flex justify-between items-center">
-            <div class="md:flex items-center justify-center">  
-                <img src="./assets/img/logoblanco" alt="" class="w-20 md:mr-2 mx-auto">  
-                <h1 class="text-5xl text-center md:text-left mb-10 md:mb-0 font-bold">Belki Games</h1>
-            </div>
-            
-            <ul class="flex md:w-1/5 justify-evenly text-lg cursor-pointer">
-                <li id="iniciarSesion"><a href="forms.html">Iniciar Sesion</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div class="bg-[#03071E] pl-[2%]  pt-[2%] pr-[2%]">
-            <section>
-                <article>
-                    <div class="h-96 bg-[url('./assets/img/banner.jpg')] mb-[2%] rounded-lg bg-cover ">
-                        <div class="h-full w-full bg-slate-400/50">
+<body class="bg-fixed bg-[url('assets/img/bg.webp')] md:bg-[length:100%_100%] ">
 
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <div class="text-white mb-[2%] flex items-center">
-                        <div class="flex mr-3">
-                            <input type="search" class="text-black rounded-l-2xl w-96">
-                            <button class="bg-[#421A4C] p-2 w-20 rounded-r-2xl" ><i class="fa-brands fa-searchengin text-2xl" ></i></button>
-                        </div>
-                        
-                        <nav class="list-none flex divide-x-2 text-xl w-full space-x-4">
-                          
-                            <li class="pl-3">Categorias</li>
-                            <li class="pl-3">Biblioteca</li>
-                        </nav>
-                    </div>
-                </article>
-                <article>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4" id="games">
-                        
-                    </div>
-                </article>
-            </section>
+    <main class="w-full h-screen  bg-[#8a3fdfa1] flex  items-center justify-center p-5 overflow-y-scroll">
+           
+      
+        <div class="p-10 text-white flex flex-col items-center">
+            <img src="./assets/img/logo+nombre" alt="" class="w-2/5 m-auto mb-5">
+            <ul class="space-x-4 flex mb-5 text-xl">
+                <li><a class="" href="#">Usuario</a></li>
+                <li><a class="" href="desarrolladoras.html">Desarrolladora</a></li>
+            </ul>
+            <form class="w-full">
+               
+            </form>
         </div>
+    
+
     </main>
     <footer>
-        <div class="bg-[#F5FFED] p-6 flex">
-            <div class="w-full flex">
-                <ul>
-                    <li>Inicio</li>
-                    <li>Nosotros</li>
-                    <li>Empresa</li>
-                </ul>
-            </div>
-            <div class="w-full flex-col justify-center text-center">
-                    <img src="./assets/img/logo" alt="" class="w-20 mx-auto">
-                    <h2 class="text-xl font-bold">Belki Games</h2>
-                    <p>&copy; Todos los derechos reservados</p>                
-            </div>
-            <div class="w-full flex justify-end">
-                <h2>Redes Sociales</h2>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 
-    <template data-game>
-        <div">
-            <div class="group aspect-square rounded-t-lg bg-[length:100%_100%]">
-                <div class="bg-emerald-600/60 w-full h-full rounded-md">
-                </div>
-                
+    </footer>
+
+    <template data-log>
+        <div>
+            <div class="flex mb-5">
+                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#421A4C] text-slate-200" for="username">
+                    <i class="fa-solid fa-at"></i>
+                </label>
+                <input id="username" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none bg-[#f5ffed]" placeholder="Correo" type="text" autocomplete="email">
             </div>
-            <div class=" text-white p-3 h-32">
-                <p class="text-lg font-bold">Nombre juego</p>
-                <h5>Precio</h5>
+            <div class="flex mb-5">
+                <label class="w-[4em] flex items-center justify-center cursor-text bg-[#421A4C] text-slate-200" for="password">
+                    <i class="fa-solid fa-lock"></i>
+                </label>
+                <input id="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none bg-[#f5ffed]" placeholder="Contraseña" type="password" autocomplete="current-password">
+            </div>
+                <input class="w-full  p-[1em] bg-[#03071e] text-white mb-5 cursor-pointer hover:bg-[#060e39]" type="submit" value="Iniciar Sesion" id="login">
+                <p>No tienes una cuenta? <a class="hover:underline cursor-pointer text-[#5e76fc]" id="reg">Registrate</a></p>
+        </div>
+      
+    </template>
+
+    <template data-sign>
+        <div>
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Correo
+                </label>
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Nombre
+                </label>
+                
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Apellido
+                </label>
+             
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] flex items-center justify-center font-bold cursor-text bg-[#f5ffed] text-slate-400">
+                    Usuario
+                </label>
+            
+                <input type="text" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" id="correo">
             </div>
         
-        </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Pais
+                </label>
+                <select  id="paises" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none" >
+
+                </select>
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Contraseña
+                </label>
+             
+                <input type="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none">
+            </div>
+            <div class="flex mb-5">
+                <label class="w-[6em] font-bold flex items-center justify-center cursor-text bg-[#f5ffed] text-slate-400">
+                    Repetir Contraseña
+                </label>
+            
+                <input type="password" class="p-[1em] flex-1 border-0 text-slate-700 focus:outline-none">
+            </div>
+            <button class="w-full bg-[#03071E] text-white p-3 rounded-xl hover:bg-[#070e3a] my-5">Registrarse</button>
+            <div>
+                <a class="hover:underline cursor-pointer" id="log">Volver</a>
+            </div> 
+        </div> 
     </template>
+    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
