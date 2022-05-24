@@ -19,4 +19,3 @@ if(window.location.search.substring(6)){
     li.appendChild(a)
     sisas.parentElement.appendChild(li)
 }
-console.log(window.location.search.substring(6))

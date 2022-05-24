@@ -28,14 +28,14 @@ export async function changeForm(){
         })
 
         signForm.querySelector("#log").addEventListener("click", ()=>{
-            window.location.href =(`./forms.html`)
+            window.location.href =(`./index.html`)
         })
     
     }else{
         let logForm = log.content.cloneNode(true).children[0]
         form.appendChild(logForm)
         logForm.querySelector("#reg").addEventListener('click',()=>{
-            window.location.href =(`./forms.html?reg`)
+            window.location.href =(`./index.html?reg`)
         })
     }
 }
