@@ -17,7 +17,7 @@ export async function validate(){
             })
           
             if(data.success){
-                window.location.href=(`./index.html?user=${data.data[0].usuario}`)
+                window.location.href=(`./principal.html?user=${data.data[0].usuario}`)
             }
         }
     }
