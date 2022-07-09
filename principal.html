@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/controller.js" defer></script>
+    <script src="js/controller.js" type="module" defer></script>
     <title>BelkiGames</title>
 </head>
 <body class="select-none scroll-smooth">
@@ -18,7 +18,8 @@
             </div>
             
             <ul class="flex md:w-1/5 justify-evenly text-lg cursor-pointer">
-                <li id="iniciarSesion"><a href="forms.html">Iniciar Sesion</a></li>
+                <li id="iniciarSesion"><a href="index.html">Iniciar Sesion</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a></li>
             </ul>
         </div>
     </header>
@@ -76,13 +77,14 @@
     <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 
     <template data-game>
-        <div">
+        <div>
             <div class="group aspect-square rounded-t-lg bg-[length:100%_100%]">
-                <div class="bg-emerald-600/60 w-full h-full rounded-md">
+                <div class="group-hover:bg-emerald-600/60 w-full h-full z-10">
+                    <img src="" alt="">
                 </div>
                 
             </div>
-            <div class=" text-white p-3 h-32">
+            <div class=" text-white py-3 h-32">
                 <p class="text-lg font-bold">Nombre juego</p>
                 <h5>Precio</h5>
             </div>
