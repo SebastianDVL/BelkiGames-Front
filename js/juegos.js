@@ -5,22 +5,25 @@ export async function mostrarJuegos(){
         method: 'GET'
     })
 
-    console.log(res)
     const gamesContainer= document.querySelector("#games")
     const gameTemplate = document.querySelector("[data-game]")
 
 
     res.data.forEach(game => {
         let container = gameTemplate.content.cloneNode(true).children[0]
-        let img = container.querySelector("img")
-        let precio = container.querySelector("h5")
-        let nombre = container.querySelector("p")
+        container.querySelector(".group").classList.add(`bg-[url('${game.imagenCartelera}')]`) 
+        container.querySelector("h5").textContent = "$" + Intl.NumberFormat("ES-co").format(game.precio)
+        container.querySelector("p").textContent = game.nombre
+        container.querySelector('button').id = game._id
 
-        nombre.textContent = game.nombre
-        precio.textContent = "$" + Intl.NumberFormat("ES-co").format(game.precio)
-        img.src = game.imagenCartelera
         gamesContainer.appendChild(container)
     });
    
+    let buttons = document.querySelectorAll('.bt')
     
+    buttons.forEach(button => {
+        button.addEventListener('click',() =>{
+            window.location.href=(`./videojuego.html?id=${button.id}`)
+        })
+    })
 }
