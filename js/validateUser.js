@@ -1,4 +1,5 @@
 import {consumirAPI} from './consumirAPI.js'
+
 export async function validate(){
     let email = document.querySelector("#username")
 
@@ -26,3 +27,5 @@ export async function validate(){
         }
     }
 }
+
+    

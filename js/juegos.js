@@ -23,7 +23,7 @@ export async function mostrarJuegos(){
     
     buttons.forEach(button => {
         button.addEventListener('click',() =>{
-            window.location.href=(`./videojuego.html?id=${button.id}`)
+            window.location.href=(`./videojuego.html?id=${button.id}&usr=${window.location.search.substring(6)}`)
         })
     })
 }

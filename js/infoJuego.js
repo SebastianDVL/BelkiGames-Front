@@ -1,11 +1,13 @@
 import { consumirAPI } from "./consumirAPI.js";
+import { comprar } from "./purchase.js";
 
-console.log(new Date(Date.now()).toLocaleDateString())
-let info = await consumirAPI(`https://belkigames.herokuapp.com/api/v1/game/${window.location.search.substring(4)}`,{
+let urlParams = new URLSearchParams(window.location.search)
+
+document.querySelector("#iniciarSesion").innerHTML = `<i class="fa-solid fa-ghost mr-2"></i> ${urlParams.get("usr")}`
+let info = await consumirAPI(`https://belkigames.herokuapp.com/api/v1/game/${urlParams.get("id")}`,{
     method: "GET"
 })
 
-console.log(info)
 
 let inf =  document.querySelector('main')
 //inf.classList.add(`bg-[url('${info.data.imagenPrincipal}')]`)
@@ -17,8 +19,7 @@ const colorThief = new ColorThief()
 let img = new Image() 
 img.addEventListener('load', function() {
     let color = colorThief.getColor(img);
-    document.querySelector('body').style.background = `rgb(${color[0]},${color[1]},${color[2]})`
-    document.querySelector('#poster div').classList.add(`group-hover:bg-[rgb(${color[0]},${color[1]},${color[2]},0.4)]`)
+    document.querySelectorAll('hr').forEach(hr=>{hr.classList.add(`border-[rgb(${color[0]},${color[1]},${color[2]})]`)})
 })
     
 img.src  =`${imagen}`
@@ -39,4 +40,7 @@ info.data.imagenes.forEach(img =>{
     
     imgsContainer.appendChild(imgContainer)
 })
+
+comprar()
+
 

@@ -1,3 +1,4 @@
+import { buscarJuego } from "./buscador.js"
 import { mostrarJuegos } from "./juegos.js"
 
 mostrarJuegos()
@@ -8,3 +9,5 @@ if(window.location.search.substring(6)){
 }else{
     window.location.href=(`./index.html`)
 }
+
+buscarJuego()
